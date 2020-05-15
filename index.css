@@ -1,0 +1,24 @@
+.caixa-input {
+    border-radius: 20%;
+    border: 2px silver;
+    background-color: steelblue;
+    align-self: center;
+    box-shadow: rgb(100, 100, 100);
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.caixa-input > input {
+    margin-top: 20px;
+    text-decoration: tan;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-decoration-color: teal;
+    background-color: transparent;
+}
+
+.caixa-input > p {
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+} 
