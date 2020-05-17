@@ -4,6 +4,7 @@
     <head>
         <title>JS</title>
         <link rel="stylesheet" href="index.css">
+        <script src="funcao-model.js"></script>
         <script src="script.js"></script>
     </head>
     <body>
@@ -12,6 +13,15 @@
                 <p>Insira o número para as funções:</p>
                 <input type="number" name="numInput" id="numInput" />
                 <button type="button" onclick="QuadrosFactory.desenhaQuadros()">Transformar</button>
+                <hr>
+                <p>Insira uma função nova:</p>
+                <span>
+                    <label for="novaFuncaoTitulo">Título:</label>
+                    <input type="text" name="novaFuncaoTitulo" id="novaFuncaoTitulo" />
+                    <label for="novaFuncaoExpressao">Expressão da função:</label>
+                    <textarea name="novaFuncaoExpressao" id="novaFuncaoExpressao"></textarea>
+                    <button type="button" onclick="QuadrosFactory.gravaFuncao()">Gravar</button>
+                </span>
             </div>
         </div>
         <div id="secaoIterativa">

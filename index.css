@@ -1,15 +1,16 @@
 body {
     overflow-x: hidden;
-    background-color: dodgerblue;
+    background-color: rgb(153, 197, 153);
 }
 
 .caixa {
-    background-image: radial-gradient(navy, blue);
+    background-image: radial-gradient(rgb(6, 86, 86), rgb(45, 100, 85));
     margin: auto;
-    color: azure;
+    color: aliceblue;
     padding: 3% 2%;
-    box-shadow: 0px 0px 10px 10px inset dodgerblue;
-    border-radius: 25px;
+    box-shadow: 0px 0px 7px 7px inset rgb(60, 60, 100);
+    border: 2px solid rgb(153, 197, 153);
+    border-radius: 50px;
     z-index: 2;
 }
 
@@ -23,7 +24,7 @@ body {
     width: 20vw;
     height: 10vh;
     display: inline-block;
-    margin: 30px 2%;
+    margin: 70px 2%;
 }
 
 .caixa > button {
@@ -36,6 +37,7 @@ body {
 
 .caixa > input {
     position: relative;
+    background-color: rgb(6, 126, 126) !important;
     text-decoration: black;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
@@ -49,8 +51,13 @@ body {
 
 .caixa > p {
     text-align: center;
-    font-size: 18px;
-    font-weight: bolder;
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(153, 197, 153);
+    letter-spacing: 1px;
+    text-shadow: 1px 0 0 rgb(60, 60, 100), -1px 0 0 rgb(60, 60, 100), 0 1px 0 rgb(60, 60, 100), 0 -1px 0 rgb(60, 60, 100), 1px 1px rgb(60, 60, 100), -1px -1px 0 rgb(60, 60, 100), 1px -1px 0 rgb(60, 60, 100), -1px 1px 0 rgb(60, 60, 100);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 
