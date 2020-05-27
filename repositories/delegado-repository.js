@@ -1,13 +1,25 @@
+/**
+ * Cria uma instância de uma lista de funções delegadas, e insere uma lista de funções básicas na construção da instância.
+ * @public
+ * @class
+ * @property {FuncaoModel[]} #_delegate
+ * @method delegate
+ * @constructs DelegadoRepository
+ */
 class DelegadoRepository {
 
-    /** @type {Function[]} */
+    /**
+     * A lista de funções.
+     * @private 
+     * @type {FuncaoModel[]}
+     */
     #_delegate;
 
     constructor() {
         
-        let seed = [
-            new FuncaoModel("Quadrado:", 'return n != 0 ? Math.pow(n, 2): 0;'),
-            new FuncaoModel("Cubo:", 'return n != 0 ? Math.pow(n, 3): 0;'),
+        this.#_delegate = [
+            new FuncaoModel("Quadrado:", 'n != 0 ? Math.pow(n, 2): 0;'),
+            new FuncaoModel("Cubo:", 'n != 0 ? Math.pow(n, 3): 0;'),
             new FuncaoModel("É primo?", `    
                 if (n == 0 || n == 1) return 'Não';
         
@@ -27,15 +39,20 @@ class DelegadoRepository {
     
                 return n;
             `),
-            new FuncaoModel("Raiz quadrada:", 'return n != 0 ? Math.sqrt(n) : 0;'),
-            new FuncaoModel("Par ou ímpar?", 'return n % 2 == 0 || n == 0 ? "Par" : "Ímpar";')
+            new FuncaoModel("Raiz quadrada:", 'n != 0 ? Math.sqrt(n) : 0;'),
+            new FuncaoModel("Par ou ímpar?", 'n % 2 == 0 || n == 0 ? "Par" : "Ímpar";')
         ];
-
-        this.#_delegate = seed.map((f => Object.defineProperty()))
+        
     }
 
-    geraDelegadoInicial = del => this.#_delegate[this.#toCamelCase(del.titulo)] = del.expressao;    
-
-    insereFuncaoNoDelegado = model => this.#_delegate[this.#toCamelCase(model.titulo)] = `return ${model.expressao};`;
+    /** 
+     * Retorna a lista de funções.
+     * @public
+     * @method delegate
+     * @returns {FuncaoModel[]} A lista de funções
+     */
+    get delegate() {
+        return this.#_delegate;
+    }
 
 }
